@@ -23,8 +23,9 @@ app.use( express.static('public') );
 //res.send('Hello World')
 //})
 
+// comentar para desplegar apps react y angular
 
-app.get('/', (req, res) => {
+/* app.get('/', (req, res) => {
   //res.send('Hola mundo');
   res.render('home',{
     nombre:'Allegra',
@@ -47,12 +48,13 @@ app.get('/elements', (req, res) => {
     nombre:'Allegra',
     titulo:'Curso de Node'
   });
-});
+}); */
 
 // manejador de errores
 app.get('*', ( req, res ) => {
     //res.send('404 pagina no encontrada')
-    res.sendFile(__dirname + '/public/404.html');
+    // res.sendFile(__dirname + '/public/404.html');
+    res.sendFile(__dirname + '/public/index.html');
 });
  
 //app.listen(8080)
